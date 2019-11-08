@@ -25,3 +25,10 @@ export const getBlue = () => async (dispatch) => {
         dispatch(failure(error))
     }
 };
+
+export function smurfSignUpRequest(smurfData) {
+    return dispatch => {
+        return axios.post('http://localhost:3333/smurfs', smurfData);
+    }
+        
+    }

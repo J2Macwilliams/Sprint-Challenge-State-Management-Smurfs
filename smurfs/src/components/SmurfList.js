@@ -45,8 +45,8 @@ const SmurfList = (props) => {
             <Grid container spacing={1}>
 
                 {props.smurfs.map(blue => (
-                    <Grid item xs={6} sm={3} md={2}>
-                        <Card key={blue.name} className={classes.card}>
+                    <Grid item key={blue.name} xs={6} sm={3} md={2}>
+                        <Card  className={classes.card}>
 
                             <Typography variant="h4">
                                 {blue.name}
@@ -55,7 +55,7 @@ const SmurfList = (props) => {
                                 age: {blue.age}
                             </Typography>
                             <Typography variant="h5">
-                                height: {blue.height}
+                                height: {blue.height} cm
                             </Typography>
                         </Card>
                     </Grid>
