@@ -10,7 +10,7 @@ export class SmurfForm extends Component {
 
     handleChanges = e => {
         this.setState({
-            name: e.target.value
+            [e.target.name]: e.target.value
         });
 
     };
