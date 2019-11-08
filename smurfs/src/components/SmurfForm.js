@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { connect } from 'react-redux';
+import { smurfSignUpRequest } from '../actions/index';
 import { Grid, Paper, TextField, Button } from '@material-ui/core';
 
 
@@ -65,4 +68,8 @@ export class SmurfForm extends Component {
     }
 }
 
-export default SmurfForm
+// SignUpForm.propTypes = {
+//     smurfSignUpRequest: React.propTypes.func.isRequired
+// }
+
+export default connect((state) => { return {} }, { smurfSignUpRequest })(SmurfForm);
