@@ -12,7 +12,7 @@ export const getBlue = () => async (dispatch) => {
     try {
         dispatch(loading());
 
-        axios.get('')
+        axios.get('http://localhost:3333/smurfs')
             .then(response => {
                 console.log("Blue?", response.data)
                 const info = response.data

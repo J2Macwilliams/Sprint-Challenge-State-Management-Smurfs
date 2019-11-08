@@ -13,8 +13,8 @@ const useStyles = makeStyles(() => ({
 
     card: {
         maxWidth: 300,
-        margin: 7
-
+        margin: 7,
+        padding: '2%'
     },
     media: {
         height: 0,
@@ -23,7 +23,8 @@ const useStyles = makeStyles(() => ({
     },
     button: {
         fontSize: '1.6rem',
-        background: 'white',
+        background: 'blue',
+        color: 'white',
         margin: '3%'
 
     }
@@ -52,6 +53,8 @@ const SmurfList = (props) => {
                             </Typography>
                             <Typography variant="h5">
                                 age: {blue.age}
+                            </Typography>
+                            <Typography variant="h5">
                                 height: {blue.height}
                             </Typography>
                         </Card>
