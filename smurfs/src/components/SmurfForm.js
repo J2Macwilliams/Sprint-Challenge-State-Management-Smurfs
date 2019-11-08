@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Paper, TextField, Button } from '@material-ui/core';
-import axios from 'axios';
+
 
 export class SmurfForm extends Component {
     state = {
@@ -18,7 +18,7 @@ export class SmurfForm extends Component {
     onSubmit = e => {
         e.preventDefault();
         console.log(this.state);
-        axios.post('http://localhost:3333/smurfs', { smurf: this.state });
+        this.props.smurfSignUpRequest(this.state);
     }
 
     render() {
