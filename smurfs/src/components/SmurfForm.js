@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Paper, TextField, Button } from '@material-ui/core';
+import axios from 'axios';
 
 export class SmurfForm extends Component {
     state = {
@@ -12,13 +13,19 @@ export class SmurfForm extends Component {
         this.setState({
             [e.target.name]: e.target.value
         });
-
     };
+
+    onSubmit = e => {
+        e.preventDefault();
+        console.log(this.state);
+        axios.post('http://localhost:3333/smurfs', { smurf: this.state });
+    }
+
     render() {
         return (
             <Grid>
                 <Paper>
-                    <form>
+                    <form onSubmit={this.onSubmit}>
                         <TextField
                             id="outlined-basic"
                             label="name"
