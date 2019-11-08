@@ -20,7 +20,7 @@ export class SmurfForm extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        console.log(this.state);
+        // console.log(this.state);
         this.props.smurfSignUpRequest(this.state);
     }
 
@@ -59,7 +59,8 @@ export class SmurfForm extends Component {
                             onChange={this.handleChanges}
                             required
                         />
-                        <Button type='submit'>submit</Button>
+                        <Button type='submit' style={{ background: 'lightgreen' }}>submit</Button>
+                        {/* <Button style={{ background: 'red', color: 'white' }}>DELETE</Button> */}
                     </form>
                 </Paper>
             </Grid>
@@ -68,8 +69,6 @@ export class SmurfForm extends Component {
     }
 }
 
-// SignUpForm.propTypes = {
-//     smurfSignUpRequest: React.propTypes.func.isRequired
-// }
+
 
 export default connect((state) => { return {} }, { smurfSignUpRequest })(SmurfForm);

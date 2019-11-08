@@ -7,7 +7,7 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
-    console.log("reducer", action);
+    // console.log("reducer", action);
     switch (action.type) {
         case LOADING:
             return {
@@ -28,6 +28,8 @@ export const reducer = (state = initialState, action) => {
                 error: action.payload,
                 isLoading: false
             }
+        // case DELETE_SMURF_SUCCESS:
+        //     const newState = ([...state, state])
         default:
             return state;
     }

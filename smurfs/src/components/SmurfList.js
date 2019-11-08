@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const SmurfList = (props) => {
-    console.log("SmurfList", props);
+    // console.log("SmurfList", props);
     const classes = useStyles();
     return (
         <>
