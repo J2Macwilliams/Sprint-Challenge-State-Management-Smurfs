@@ -27,8 +27,8 @@ export class SmurfForm extends Component {
     render() {
         return (
             <Grid>
-                <Paper>
-                    <form onSubmit={this.onSubmit}>
+                <Paper style={{background: 'dodgerblue', padding: '2%'}}>
+                    <form style={{ margin: '2%'}} onSubmit={this.onSubmit}>
                         <TextField
                             id="outlined-basic"
                             label="name"
@@ -59,7 +59,7 @@ export class SmurfForm extends Component {
                             onChange={this.handleChanges}
                             required
                         />
-                        <Button type='submit' style={{ background: 'lightgreen' }}>submit</Button>
+                        <Button type='submit' style={{ background: 'white' }}>submit</Button>
                         {/* <Button style={{ background: 'red', color: 'white' }}>DELETE</Button> */}
                     </form>
                 </Paper>
