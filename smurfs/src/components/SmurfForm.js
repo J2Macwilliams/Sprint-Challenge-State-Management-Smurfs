@@ -49,7 +49,7 @@ export class SmurfForm extends Component {
                             onChange={this.handleChanges}
                             required
                         />
-                        <Button type={submit}>submit</Button>
+                        <Button type='submit'>submit</Button>
                     </form>
                 </Paper>
             </Grid>
